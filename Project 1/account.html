@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="../css/mySite.css">
+        <title>Create an Account</title>
+    </head>
+
+    <body id="proj1_account">
+
+        <h2> Create an Account </h2>
+
+        <form action="https://unfinishedbusiness.app/alert.php" method="post">
+            
+            <table>
+
+                <tr>
+                    <td> First Name: </td>
+                    <td><input type="text" id="first_name" name="first_name" required></td>
+                </tr>
+
+                <tr>
+                    <td> Last Name: </td>
+                    <td><input type="text" id="last_name" name="last_name" required></td>
+                </tr>
+
+                <tr>
+                    <td> E-Mail: </td>
+                    <td><input type="email" id="email" name="email" required></td>
+                </tr>
+
+                <tr>
+                    <td> Password: </td>
+                    <td><input type="password" id="password" name="password" required></td>
+                </tr>
+
+                <tr>
+                    <td> Confirm Password: </td>
+                    <td><input type="password" id="c_password" name="c_password" required></td>
+                </tr>
+
+                <tr>
+                    <td> Birthdate: </td>
+                    <td><input type="date" id="bdate" name="bdate" min="1970-01-01" max="2025-12-31" required></td>
+                </tr>
+
+            </table>
+
+            <p> Major: </p>
+
+            <label id="proj1_account_radio">
+                <input type="radio" name="major" value="Computer Science" id="cs">
+                <a href="https://www.unf.edu/ccec/computing/computer-science-program.html" target="_blank">Computer Science</a> <br>
+            </label>
+
+            <label id="proj1_account_radio">
+                <input type="radio" name="major" value="Information Science" id="isci">
+                <a href="https://www.unf.edu/ccec/computing/information-science-program.html" target="_blank">Information Science</a> <br>
+            </label>
+
+            <label id="proj1_account_radio">
+                <input type="radio" name="major" value="Information Systems" id="isys">
+                <a href="https://www.unf.edu/ccec/computing/information-systems-program.html" target="_blank">Information Systems</a> <br>
+            </label>
+
+            <label id="proj1_account_radio">
+                <input type="radio" name="major" value="Information Technology" id="it">
+                <a href="https://www.unf.edu/ccec/computing/information-technology-program.html" target="_blank">Information Technology</a> <br>
+            </label>
+
+            <p> Programming Language Experience: </p>
+
+            <table id="proj1_account_checkbox">
+
+                <tr>
+                    <td><input type="checkbox" name="language" id="c" value="c"></td>
+                    <td> <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank">C</a> </td>
+                    <td><input type="checkbox" name="language" id="c_sharp" value="c_sharp"></td>
+                    <td> <a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)" target="_blank">C#</a> </td>
+                </tr>
+
+                <tr>
+                    <td><input type="checkbox" name="language" id="java" value="java"></td>
+                    <td> <a href="https://en.wikipedia.org/wiki/Java_(programming_language)" target="_blank">Java</a> </td>
+                    <td><input type="checkbox" name="language" id="javascript" value="javascript"></td>
+                    <td> <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">Javascript</a> </td>
+                </tr>
+
+                <tr>
+                    <td><input type="checkbox" name="language" id="php" value="php"></td>
+                    <td> <a href="https://en.wikipedia.org/wiki/PHP" target="_blank">PHP</a> </td>
+                    <td><input type="checkbox" name="language" id="python" value="python"></td>
+                    <td> <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank">Python</a> </td>
+                </tr>
+
+                <tr>
+                    <td><input type="checkbox" name="language" id="visualbasic" value="visualbasic"></td>
+                    <td> <a href="https://en.wikipedia.org/wiki/Visual_Basic_(.NET)" target="_blank">Visual Basic</a> </td>
+                    <td><input type="checkbox" name="language" id="other" value="other"></td>
+                    <td> Other </td>
+                </tr>
+
+            </table>
+
+            <br>
+
+            <input type="submit">
+            <input type="reset">
+
+            <input type="hidden" name="username" value="598621256">
+            <input type="hidden" name="to_email_address" value="n01450847@unf.edu">
+            <input type="hidden" name="to_display_name" value="Dylan Vance">
+
+        </form>
+
+        <p>
+            <a href="index.html"> Personal </a>
+            &nbsp;
+            <a href="../index.html"> ePortfolio </a>
+        </p>
+
+    </body>
+
+</html>

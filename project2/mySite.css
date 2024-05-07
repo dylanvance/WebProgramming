@@ -1,0 +1,151 @@
+@import url("http://139.62.210.181/default.css");
+/* DO NOT MODIFY THE @import STATEMENT ABOVE */
+
+/* You will use this CSS file for each of your projects. Simply add new CSS classes and elements to the end of the file. */
+
+/* Be careful to keep your selector names unique to avoid collisions, which can cause confusion. */
+
+/* Project 1 css code start */
+
+/* index.html code */
+
+#proj1_index #aboutme {
+    color: gold;
+}
+
+#proj1_index #hobbies {
+    color: teal;
+}
+
+#proj1_index #education {
+    color: coral;
+}
+
+#proj1_index #high_school {
+    font-style: italic;
+}
+
+#proj1_index #university {
+    font-weight: bold;
+}
+
+#proj1_index a:hover {
+    font-size: 150%;
+}
+
+/* schedule.html code */
+
+#proj1_schedule #schedule_table {
+    text-align: center;
+}
+
+#proj1_schedule #schedule_table_header {
+    color: red;
+}
+
+#proj1_schedule #schedule_table_stripe {
+    background-color: grey;
+}
+
+#proj1_schedule #schedule_secondary_list {
+    list-style-type: upper-alpha;
+}
+
+/* account.html code */
+
+#proj1_account #proj1_account_radio input ~ a {
+    background-color: grey;
+}
+
+#proj1_account #proj1_account_radio input:checked ~ a {
+    background-color: green;
+}
+
+/* Project 1 css code end */
+
+/* Project 2 css code start */
+
+#proj2_index #proj2_header {
+    color: blue;
+}
+
+/* Project 2 css code end */
+
+/* Project 3 css code begin */
+
+#proj3_index {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#proj3_index #proj3_header {
+    color: green;
+    text-align: center;
+}
+
+#proj3_index #analyze_form div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#proj3_index #analyze_form #analyze_area {
+    background-color: lightgrey;
+    border: none;
+    border-radius: 5px;
+    font-size: 12pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#proj3_index #analyze_form #analyze_submit {
+    color: black;
+    font-size: 12pt;
+    background-color: green;
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#proj3_index #analyze_form #analyze_submit:hover {
+    background-color: lightgreen;
+    color: white;
+}
+
+#proj3_index #analyze_labels {
+    font-size: 16pt;
+    font-weight: bold;
+    color: black;
+}
+
+#proj3_footer {
+    position: fixed;
+    bottom: 0;
+    font-size: 16pt;
+}
+
+/* Project 3 css code end */
+
+/* Project 4 css code begin */
+
+#proj4_login_body {
+    font-size: 16pt;
+}
+
+#proj4_login_footer {
+    position: fixed;
+    bottom: 0;
+    font-size: 16pt;
+}
+
+#movies_table {
+    text-align: center;
+    font-size: 16pt;
+}
+
+#results_table {
+    text-align: center;
+    font-size: 16pt;
+}
+
+/* Project 4 css code end */

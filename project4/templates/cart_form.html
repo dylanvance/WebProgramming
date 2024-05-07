@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>myMovies Xpress! - Cart</title>
+		<link rel="stylesheet" type="text/css" href="../css/mySite.css">
+		<script src="./script.js"></script>
+	</head>
+	<body>
+		<h3>Welcome, <?= $_SESSION["displayName"] ?> (<a href="javascript: confirmLogout()">logout</a>)</h3>
+		<h1>myMovies Xpress!</h1>
+		
+		<?php
+			if (count($movies) == 0) {
+				echo '<h3>Add some movies to your cart!</h3>';
+			}
+		?>
+
+		<h3> There are currently <?= count($movies) ?> movie(s) in your cart. </h3>
+
+		<table border="2" id="movies_table">
+			
+			<?php
+				if (count($movies) > 0) {
+			?>
+
+					<tr>
+						<th>Poster</th>
+						<th>Title (Year)</th>
+						<th>More Info</th>
+						<th>Remove Movie</th>
+					</tr>
+
+			<?php
+				}
+			?>
+
+			<?php
+				foreach ($movies as $id) {
+					$m = getMovieData($id);
+					?>
+
+					<tr>
+						<td> <?php echo '<img src="' . $m['Poster'] . '" height="100" alt=":/">'; ?> </td>
+						<td> <?php echo $m['Title'] . ' (' . $m['Year'] . ')'; ?> </td>
+						<td> <?php echo '<a href="https://www.imdb.com/title/' . $m['IMDB_ID'] . '/" target="_blank"> IMDB </a>'; ?> </td>
+						<td> <?php echo "<a href=\"javascript: confirmRemove('" . $m['Title'] . "', '" . $m['ID'] . "')\">X</a>"; ?> </td>
+					</tr>
+
+					<?php
+				}
+			?>
+
+		</table>
+
+		<br>
+
+		<input type="button" value="Add Movie" onclick="window.location.href='./search.php'"/>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="button" value="Checkout" onclick="javascript: confirmCheckout()"/>
+
+		<!-- This code is used by the movieInfo.php file provided by the professor -->
+		<div id='modalWindow' class='modal'>
+			<div id='modalWindowContent' class='modal-content'>
+			</div>
+		</div>
+	</body>
+</html>

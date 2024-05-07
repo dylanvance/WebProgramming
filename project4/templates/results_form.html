@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>myMovies Xpress! - Search Results</title>
+		<link rel="stylesheet" type="text/css" href="../css/mySite.css" />
+		<script src="./script.js"></script>
+	</head>
+	<body>
+		<h3>Welcome, <?= $_SESSION["displayName"] ?> (<a href="javascript: confirmLogout()">logout</a>)</h3>
+		<h1>myMovies Xpress!</h1>
+		
+		<h3> <?= count($resultsArray) ?> movies found for the keyword "<?= $searchString ?>."</h3>
+
+		<table border="2" id="results_table">
+
+			<tr>
+				<th>Poster</th>
+				<th>Title (Year)</th>
+				<th>See Info</th>
+				<th>Add Movie</th>
+			</tr>
+
+			<?php
+				foreach ($resultsArray as $r) {
+					?>
+
+					<tr>
+						<td> <?php echo '<img src="' . $r['Poster'] . '" height="100" alt=":/">'; ?> </td>
+						<td> <?php echo $r['Title'] . ' (' . $r['Year'] . ')'; ?> </td>
+						<td> <?php echo '<a href="https://www.imdb.com/title/' . $r['imdbID'] . '/" target="_blank"> IMDB </a>'; ?> </td>
+						<td> <?php echo "<a href=\"javascript: addMovie('" . $r['imdbID'] . "')\">+</a>"; ?> </td>
+					</tr>
+
+					<?php
+				}
+			?>
+
+		</table>
+
+		<?php
+			if (count($resultsArray) == 0) {
+				echo '<h3>0 movies found. Try expanding your search terms.</h3>';
+			}
+		?>
+
+		<br>
+
+		<input type="button" value="Cancel" onclick="javascript: confirmCancel()"/>
+
+	</body>
+</html>

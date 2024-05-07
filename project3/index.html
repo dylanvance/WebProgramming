@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>Text Analyzer</title>
+        <link rel="stylesheet" type="text/css" href="../css/mySite.css">
+        <script src="script.js" defer></script>
+    </header>
+
+    <body id="proj3_index">
+        <h1 id="proj3_header">Text Analyzer</h1>
+        
+        <form id="analyze_form" onsubmit="return analyzeText();" method="post">
+            <div>
+                <textarea name="analyze_area" id="analyze_area" cols="100" rows="25"></textarea>
+            </div>
+            <br>
+            <div>
+                <button type="submit" id="analyze_submit">Analyze it!</button>
+            </div>
+        </form>
+        <br>
+        <div id="analyze_labels">
+            <label id="word_count">Word Count: </label>
+            <br>
+            <label id="unique_word">Unique Words: </label>
+            <br>
+            <label id="long_word">Long Words: </label>
+            <br>
+            <label id="sentence_count">Sentence Count: </label>
+            <br>
+            <label id="number_count">Number Count: </label>
+            <br>
+            <label id="frequent_word">Most Frequent Word: </label>
+        </div>
+    </body>
+
+    <footer id="proj3_footer">
+        <a href="../index.html">ePortfolio</a>
+    </footer>
+</html>
